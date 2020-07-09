@@ -1,0 +1,7 @@
+install.packages("devtools")
+library("devtools")
+library("roxygen2")
+setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
+document()
+setwd("..")
+install("covariates")
