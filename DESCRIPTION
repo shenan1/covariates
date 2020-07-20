@@ -7,7 +7,7 @@ Authors@R:
            role = c("aut", "cre"),
            email = "first.last@example.com",
            comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: Calculates covariates as a time series or 2D grid, 
+Description: Loads and calculates covariates as a time series or 2D grid, 
     using trilinear or quadrilinear interpolation.
 License: `use_mit_license()`, `use_gpl3_license()` or friends to
     pick a license
