@@ -4,10 +4,10 @@
 \alias{find.depth}
 \title{Find nearest and neighbour depth indices}
 \usage{
-find.depth(gldr.mean, i, dat.depth)
+find.depth(gldr.mean, i, cov.depth)
 }
 \arguments{
-\item{dat.depth}{tem.depth, cur.depth, chl.depth ...}
+\item{cov.depth}{tem.depth, cur.depth, chl.depth ...}
 }
 \value{
 Nearest and neighbour depth indices when training

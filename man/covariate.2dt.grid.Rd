@@ -6,18 +6,16 @@
 \usage{
 covariate.2dt.grid(
   grid.list,
-  dat.lon,
-  dat.lat,
-  dat.time,
-  dat.time.predicting,
+  cov.lon,
+  cov.lat,
+  cov.time,
+  cov.time.predicting,
   k,
-  variable
+  cov.var
 )
 }
 \arguments{
-\item{dat.lon}{mld.lon, ...}
-
-\item{variable}{mlotst, ...}
+\item{cov}{mld}
 }
 \value{
 Covariates at grid locations.

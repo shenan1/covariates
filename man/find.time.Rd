@@ -4,12 +4,12 @@
 \alias{find.time}
 \title{Find nearest and neighbour time indices}
 \usage{
-find.time(dat.time.simulating, i, dat.time)
+find.time(cov.time.simulating, i, cov.time)
 }
 \arguments{
-\item{dat.time.simulating}{dat.time.training, dat.time.predicting}
+\item{cov.time.simulating}{cov.time.training, cov.time.predicting}
 
-\item{dat.time}{mld.time, chl.time, ...}
+\item{cov.time}{mld.time, chl.time, ...}
 }
 \value{
 Nearest and neighbour time indices.

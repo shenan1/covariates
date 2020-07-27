@@ -8,17 +8,15 @@ covariate.2dt(
   train.length,
   training,
   gldr.mean,
-  dat.lon,
-  dat.lat,
-  dat.time,
-  dat.time.training,
-  variable
+  cov.lon,
+  cov.lat,
+  cov.time,
+  cov.time.training,
+  cov.var
 )
 }
 \arguments{
-\item{dat.lon}{mld.lon, ...}
-
-\item{variable}{mlotst, ...}
+\item{cov}{mld}
 }
 \value{
 Covariates at gldr.mean locations.

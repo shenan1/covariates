@@ -4,10 +4,10 @@
 \alias{find.depth.grid}
 \title{Find nearest and neighbour depth indices when predicting}
 \usage{
-find.depth.grid(gldr.depth.mean, dat.depth)
+find.depth.grid(gldr.depth.mean, cov.depth)
 }
 \arguments{
-\item{dat.depth}{tem.depth, cur.depth, chl.depth ...}
+\item{cov.depth}{tem.depth, cur.depth, chl.depth ...}
 }
 \value{
 Nearest and neighbour depth indices.

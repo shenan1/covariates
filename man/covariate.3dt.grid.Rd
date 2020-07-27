@@ -7,19 +7,17 @@
 covariate.3dt.grid(
   grid.list,
   gldr.depth.mean,
-  dat.lon,
-  dat.lat,
-  dat.depth,
-  dat.time,
-  dat.time.predicting,
+  cov.lon,
+  cov.lat,
+  cov.depth,
+  cov.time,
+  cov.time.predicting,
   k,
-  variable
+  cov.var
 )
 }
 \arguments{
-\item{dat.lon}{chl.lon, ...}
-
-\item{variable}{chlor, ...}
+\item{cov}{chl, oxy, nit, pho, tur}
 }
 \value{
 Covariates at grid locations.

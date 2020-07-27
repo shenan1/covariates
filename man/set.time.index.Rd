@@ -12,7 +12,7 @@ set.time.index(gldr.time.start, cmems.time.start, cov.time, train.length, nt)
 \item{cov.time}{covariate time values}
 }
 \value{
-Training and predicting times.
+Training and predicting time indices.
 }
 \description{
 Calculate training and predicting time indices

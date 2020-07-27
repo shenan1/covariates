@@ -8,17 +8,15 @@ covariate.3d(
   train.length,
   training,
   gldr.mean,
-  dat.lon,
-  dat.lat,
-  dat.depth,
-  dat.training,
-  variable
+  cov.lon,
+  cov.lat,
+  cov.depth,
+  cov.training,
+  cov.var
 )
 }
 \arguments{
-\item{dat.lon}{tem.lon, cur.lon, ...}
-
-\item{variable}{thetao, uo, vo, ...}
+\item{cov}{tem, cur}
 }
 \value{
 Covariates at gldr.mean locations.

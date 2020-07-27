@@ -8,18 +8,16 @@ covariate.3dt(
   train.length,
   training,
   gldr.mean,
-  dat.lon,
-  dat.lat,
-  dat.depth,
-  dat.time,
-  dat.time.training,
-  variable
+  cov.lon,
+  cov.lat,
+  cov.depth,
+  cov.time,
+  cov.time.training,
+  cov.var
 )
 }
 \arguments{
-\item{dat.lon}{chl.lon, ...}
-
-\item{variable}{chlor, ...}
+\item{cov}{chl, oxy, nit, pho, tur}
 }
 \value{
 Covariates at gldr.mean locations.

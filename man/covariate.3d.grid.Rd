@@ -7,18 +7,16 @@
 covariate.3d.grid(
   grid.list,
   gldr.depth.mean,
-  dat.lon,
-  dat.lat,
-  dat.depth,
-  dat.predicting,
+  cov.lon,
+  cov.lat,
+  cov.depth,
+  cov.predicting,
   k,
-  variable
+  cov.var
 )
 }
 \arguments{
-\item{dat.lon}{tem.lon, cur.lon, ...}
-
-\item{variable}{thetao, uo, vo, ...}
+\item{cov}{tem, cur}
 }
 \value{
 Covariates at grid locations.
