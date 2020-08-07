@@ -2,16 +2,20 @@
 % Please edit documentation in R/loadData2d1.R
 \name{load.data.2d1}
 \alias{load.data.2d1}
-\title{Load covariate data, including 2D, time and 1 variable}
+\title{Load covariate data, including 2D, time and 1 variable
+Includes flag for data source}
 \usage{
-load.data.2d1(data.file)
+load.data.2d1(data.file, data.source)
 }
 \arguments{
 \item{data.file}{path to data file}
+
+\item{data.source}{CMEMS or ECMWF}
 }
 \value{
 Covariate data.
 }
 \description{
 Load covariate data, including 2D, time and 1 variable
+Includes flag for data source
 }

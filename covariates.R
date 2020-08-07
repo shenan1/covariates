@@ -12,7 +12,6 @@ install("covariates")
 install_github('shenan1/covariates')
 
 # prefix functions with namespace covariates:::
-# update library
 
 # git add R/* man/*
 # git commit
