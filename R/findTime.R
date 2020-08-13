@@ -6,7 +6,7 @@
 #' @return Nearest and neighbour time indices.
 find.time <- function(cov.time.simulating, i, cov.time) {
   time.nearest <- which.min(abs(cov.time.simulating[i] - cov.time))
-  if (cov.time.simulating[i] <= cov.time[time.nearest]){
+  if (cov.time.simulating[i] < cov.time[time.nearest]){
     time.neighbour <- time.nearest - 1
   } else {
     time.neighbour <- time.nearest + 1

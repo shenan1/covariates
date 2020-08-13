@@ -4,10 +4,10 @@
 \alias{set.time.index}
 \title{Calculate training and predicting time indices}
 \usage{
-set.time.index(gldr.time.start, cmems.time.start, cov.time, train.length, nt)
+set.time.index(gldr.time.start, dat.time.start, cov.time, train.length, nt)
 }
 \arguments{
-\item{cmems.time.start}{time CMEMS records begin}
+\item{dat.time.start}{time CMEMS & ECMWF records begin}
 
 \item{cov.time}{covariate time values}
 }

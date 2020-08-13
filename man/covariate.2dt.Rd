@@ -16,7 +16,7 @@ covariate.2dt(
 )
 }
 \arguments{
-\item{cov}{mld}
+\item{cov}{mld, win}
 }
 \value{
 Covariates at gldr.mean locations.
