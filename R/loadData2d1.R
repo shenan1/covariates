@@ -8,11 +8,10 @@
 load.data.2d1 <- function(data.file, data.source) {
   if (data.source == 'ECMWF') {
     lon.id <- 'longitude'
-    lat.id <- 'latitude'
-  } else {
+    lat.id <- 'latitude'} 
+  else {
     lon.id <- 'lon'
-    lat.id <- 'lat'
-  }
+    lat.id <- 'lat'}
   covariate <- nc_open(data.file)
   cov.lon <- ncvar_get(covariate, varid = lon.id)
   cov.lat <- ncvar_get(covariate, varid = lat.id)
@@ -22,7 +21,6 @@ load.data.2d1 <- function(data.file, data.source) {
   rm(covariate)
   if (data.source == 'ECMWF') {
     cov.lat <- rev(cov.lat)
-    cov.time <- cov.time*3600
-  }
+    cov.time <- cov.time*3600}
   return(list(cov.lon, cov.lat, cov.time, cov.var))
 }
