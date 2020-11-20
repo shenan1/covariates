@@ -22,5 +22,4 @@ load.data.2d1 <- function(data.file, data.source) {
   if (data.source == 'ECMWF') {
     cov.lat <- rev(cov.lat)
     cov.time <- cov.time*3600}
-  return(list(cov.lon, cov.lat, cov.time, cov.var))
-}
+  return(list(cov.lon, cov.lat, cov.time, cov.var))}

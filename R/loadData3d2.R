@@ -13,5 +13,4 @@ load.data.3d2 <- function(data.file) {
   cov.var2 <- ncvar_get(covariate, varid = 'vo')[,,,]
   nc_close(covariate)
   rm(covariate)
-  return(list(cov.lon, cov.lat, cov.depth, cov.time, cov.var1, cov.var2))
-}
+  return(list(cov.lon, cov.lat, cov.depth, cov.time, cov.var1, cov.var2))}

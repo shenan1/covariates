@@ -12,5 +12,4 @@ load.data.3d1 <- function(data.file) {
   cov.var <- ncvar_get(covariate)[,,,]
   nc_close(covariate)
   rm(covariate)
-  return(list(cov.lon, cov.lat, cov.depth, cov.time, cov.var))
-}
+  return(list(cov.lon, cov.lat, cov.depth, cov.time, cov.var))}

@@ -10,5 +10,4 @@ set.time <- function(gldr.time.start, dat.time.start, train.length, nt) {
   cov.time.predicting.start <- cov.time.training.end + 3600
   cov.time.predicting.end <- cov.time.predicting.start + (nt-1)*3600
   cov.time.predicting <- seq(from = cov.time.predicting.start, to = cov.time.predicting.end, by = 3600)
-  return(list(cov.time.training, cov.time.predicting))
-}
+  return(list(cov.time.training, cov.time.predicting))}

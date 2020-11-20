@@ -10,5 +10,4 @@ set.time.index <- function(gldr.time.start, dat.time.start, cov.time, train.leng
   cov.training.end <- cov.training.start + train.length - 1
   cov.training <- cov.training.start:cov.training.end
   cov.predicting <- cov.training.end + 1:nt
-  return(list(cov.training, cov.predicting))
-}
+  return(list(cov.training, cov.predicting))}
