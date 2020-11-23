@@ -4,10 +4,12 @@
 \alias{set.time}
 \title{Calculate training and predicting times}
 \usage{
-set.time(gldr.time.start, dat.time.start, train.length, nt)
+set.time(gldr.time.start, data.time.start, origin.time, train.length, nt)
 }
 \arguments{
-\item{dat.time.start}{time CMEMS & ECMWF records begin}
+\item{data.time.start}{time CMEMS & ECMWF records begin}
+
+\item{origin.time}{time glider records begin}
 }
 \value{
 Training and predicting times.

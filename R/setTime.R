@@ -1,10 +1,11 @@
 #' Calculate training and predicting times
 #' 
-#' @param dat.time.start time CMEMS & ECMWF records begin
+#' @param data.time.start time CMEMS & ECMWF records begin
+#' @param origin.time time glider records begin
 #' 
 #' @return Training and predicting times.
-set.time <- function(gldr.time.start, dat.time.start, train.length, nt) {
-  cov.time.training.start <- gldr.time.start - as.numeric(as.POSIXct(dat.time.start, tz = "GMT", origin="1970-01-01")) # converts gldr.mean start time to cov.time.training.start
+set.time <- function(gldr.time.start, data.time.start, origin.time, train.length, nt) {
+  cov.time.training.start <- gldr.time.start - as.numeric(difftime(data.time.start, origin.time, tz = "GMT", units = "secs")) # converts gldr.mean start time to cov.time.training.start
   cov.time.training.end <- cov.time.training.start + (train.length - 1)*3600
   cov.time.training <- seq(from = cov.time.training.start, to = cov.time.training.end, by = 3600)
   cov.time.predicting.start <- cov.time.training.end + 3600
