@@ -11,7 +11,7 @@ covariate.3d <- function(train.length, training, gldr.mean, cov.lon, cov.lat, co
     else if (gldr.mean$depth[i] == 0){
       covariate[i] <- NA} 
     else {
-      depth.nearby <- find.index(gldr.mean, i, cov.depth)
+      depth.nearby <- find.index(gldr.mean$depth, i, cov.depth)
       covariate.nearest <- interp.surface(list(x=cov.lon, y=cov.lat, z=cov.var[,, depth.nearby[1], cov.training[i]]), 
                                           cbind(x=gldr.mean$lon[i], y=gldr.mean$lat[i]))
       covariate.neighbour <- interp.surface(list(x=cov.lon, y=cov.lat, z=cov.var[,, depth.nearby[2], cov.training[i]]), 
