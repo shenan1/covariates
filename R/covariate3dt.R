@@ -1,6 +1,6 @@
 #' Calculate covariates at gldr.mean locations, using quadrilinear (3D + T) interpolation
 #' 
-#' @param cov chl, oxy, nit, pho, tur
+#' @param cov chl, cur, oxy, nit, pho, tem, tur
 #' 
 #' @return Covariates at gldr.mean locations.
 covariate.3dt <- function(train.length, training, gldr.mean, cov.lon, cov.lat, cov.depth, cov.time, cov.time.training, cov.var) {

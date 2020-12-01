@@ -15,7 +15,7 @@ covariate.2dt.grid(
 )
 }
 \arguments{
-\item{cov}{mld}
+\item{cov}{mld, rad, win}
 }
 \value{
 Covariates at grid locations.

@@ -17,7 +17,7 @@ covariate.3dt(
 )
 }
 \arguments{
-\item{cov}{chl, oxy, nit, pho, tur}
+\item{cov}{chl, cur, oxy, nit, pho, tem, tur}
 }
 \value{
 Covariates at gldr.mean locations.

@@ -5,7 +5,8 @@
 #' 
 #' @return Training and predicting times.
 set.time <- function(gldr.time.start, data.time.start, origin.time, train.length, nt) {
-  cov.time.training.start <- gldr.time.start - as.numeric(difftime(data.time.start, origin.time, tz = "GMT", units = "secs")) # converts gldr.mean start time to cov.time.training.start
+  cov.time.training.start <- gldr.time.start - as.numeric(difftime(data.time.start, origin.time, tz = "GMT", units = "secs")) 
+  # converts gldr.time.start from being relative to origin.time to being relative to data.time.start
   cov.time.training.end <- cov.time.training.start + (train.length - 1)*3600
   cov.time.training <- seq(from = cov.time.training.start, to = cov.time.training.end, by = 3600)
   cov.time.predicting.start <- cov.time.training.end + 3600

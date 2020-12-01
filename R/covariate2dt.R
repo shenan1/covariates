@@ -1,6 +1,6 @@
 #' Calculate covariates at gldr.mean locations, using trilinear (2D + T) interpolation
 #' 
-#' @param cov mld, win
+#' @param cov mld, rad, win
 #' 
 #' @return Covariates at gldr.mean locations.
 covariate.2dt <- function(train.length, training, gldr.mean, cov.lon, cov.lat, cov.time, cov.time.training, cov.var) {

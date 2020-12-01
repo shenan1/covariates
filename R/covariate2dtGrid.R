@@ -1,6 +1,6 @@
 #' Calculate covariates at grid locations, using trilinear (2D + T) interpolation
 #' 
-#' @param cov mld
+#' @param cov mld, rad, win
 #' 
 #' @return Covariates at grid locations.
 covariate.2dt.grid <- function(grid.list, cov.lon, cov.lat, cov.time, cov.time.predicting, k, cov.var) {
