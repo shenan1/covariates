@@ -4,10 +4,12 @@
 \alias{find.index}
 \title{Find nearest and neighbour indices}
 \usage{
-find.index(arbitrary.values, i, standard.values)
+find.index(arbitrary.value, standard.values)
 }
 \arguments{
-\item{standard.values}{}
+\item{arbitrary.value}{scalar}
+
+\item{standard.values}{vector}
 }
 \value{
 Nearest and neighbour indices.

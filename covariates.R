@@ -15,5 +15,8 @@ install_github('shenan1/covariates')
 
 # git add R/* man/*
 # git commit
-# include message
+# include message: press i to insert message
 #	git push
+# git rm fname
+# file will also be deleted from the filesystem
+# git mv fname newfname

@@ -1,12 +1,12 @@
 #' Find nearest and neighbour indices
 #' 
-#' @param arbitrary.values
-#' @param standard.values
+#' @param arbitrary.value scalar
+#' @param standard.values vector
 #' 
 #' @return Nearest and neighbour indices.
-find.index <- function(arbitrary.values, i, standard.values) {
-  index.nearest <- which.min(abs(arbitrary.values[i] - standard.values))
-  if (arbitrary.values[i] < standard.values[index.nearest]){
+find.index <- function(arbitrary.value, standard.values) {
+  index.nearest <- which.min(abs(arbitrary.value - standard.values))
+  if (arbitrary.value < standard.values[index.nearest]){
     index.neighbour <- index.nearest - 1} 
   else {
     index.neighbour <- index.nearest + 1}

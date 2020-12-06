@@ -2,25 +2,18 @@
 % Please edit documentation in R/covariate3d.R
 \name{covariate.3d}
 \alias{covariate.3d}
-\title{Calculate covariates at gldr.mean locations, using trilinear (3D) interpolation}
+\title{Calculate covariates at train.data locations and train.times,
+using quadrilinear (3D + T) interpolation}
 \usage{
-covariate.3d(
-  train.length,
-  training,
-  gldr.mean,
-  cov.lon,
-  cov.lat,
-  cov.depth,
-  cov.training,
-  cov.var
-)
+covariate.3d(train.length, train.data, COV, train.times)
 }
 \arguments{
-\item{cov}{tem, cur}
+\item{COV}{CHL, CUX, CUY, OXY, NIT, PHO, TEM, TUR}
 }
 \value{
-Covariates at gldr.mean locations.
+Covariates at train.data locations and train.times.
 }
 \description{
-Calculate covariates at gldr.mean locations, using trilinear (3D) interpolation
+Calculate covariates at train.data locations and train.times,
+using quadrilinear (3D + T) interpolation
 }

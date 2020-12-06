@@ -2,25 +2,18 @@
 % Please edit documentation in R/covariate3dGrid.R
 \name{covariate.3d.grid}
 \alias{covariate.3d.grid}
-\title{Calculate covariates at grid locations, using trilinear (3D) interpolation}
+\title{Calculate covariates at grid locations and pred.time,
+using quadrilinear (3D + T) interpolation}
 \usage{
-covariate.3d.grid(
-  grid.list,
-  gldr.depth.mean,
-  cov.lon,
-  cov.lat,
-  cov.depth,
-  cov.predicting,
-  k,
-  cov.var
-)
+covariate.3d.grid(pred.grid, pred.depth, COV, pred.time)
 }
 \arguments{
-\item{cov}{tem, cur}
+\item{COV}{CHL, CUX, CUY, OXY, NIT, PHO, TEM, TUR}
 }
 \value{
-Covariates at grid locations.
+Covariates at grid locations and pred.time.
 }
 \description{
-Calculate covariates at grid locations, using trilinear (3D) interpolation
+Calculate covariates at grid locations and pred.time,
+using quadrilinear (3D + T) interpolation
 }

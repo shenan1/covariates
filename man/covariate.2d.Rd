@@ -2,24 +2,18 @@
 % Please edit documentation in R/covariate2d.R
 \name{covariate.2d}
 \alias{covariate.2d}
-\title{Calculate covariates at gldr.mean locations, using bilinear (2D) interpolation}
+\title{Calculate covariates at train.data locations and train.times,
+using trilinear (2D + T) interpolation}
 \usage{
-covariate.2d(
-  train.length,
-  training,
-  gldr.mean,
-  cov.lon,
-  cov.lat,
-  cov.training,
-  cov.var
-)
+covariate.2d(train.length, train.data, COV, train.times)
 }
 \arguments{
-\item{cov}{rad}
+\item{COV}{MLD, RAD, WIN}
 }
 \value{
-Covariates at gldr.mean locations.
+Covariates at train.data locations and train.times.
 }
 \description{
-Calculate covariates at gldr.mean locations, using bilinear (2D) interpolation
+Calculate covariates at train.data locations and train.times,
+using trilinear (2D + T) interpolation
 }
