@@ -10,9 +10,9 @@ set.time(
   origin.time,
   train.length,
   nt,
-  train.interval = 3600,
-  pred.interval = 3600,
-  interval = 3600
+  train.interval = "3600",
+  pred.interval = "3600",
+  interval = "3600"
 )
 }
 \arguments{

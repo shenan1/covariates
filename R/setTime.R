@@ -4,7 +4,7 @@
 #' @param origin.time time glider records begin
 #' 
 #' @return Training and predicting times.
-set.time <- function(gldr.time.start, data.time.start, origin.time, train.length, nt, train.interval = 3600, pred.interval = 3600, interval = 3600) {
+set.time <- function(gldr.time.start, data.time.start, origin.time, train.length, nt, train.interval = '3600', pred.interval = '3600', interval = '3600') {
   cov.time.training.start <- gldr.time.start - as.numeric(difftime(data.time.start, origin.time, tz = "GMT", units = "secs")) 
   # converts gldr.time.start from being relative to origin.time to being relative to data.time.start
   cov.time.training.end <- cov.time.training.start + (train.length - 1)*train.interval
