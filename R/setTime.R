@@ -4,12 +4,12 @@
 #' @param origin.time time glider records begin
 #' 
 #' @return Training and predicting times.
-set.time <- function(gldr.time.start, data.time.start, origin.time, train.length, nt) {
+set.time <- function(gldr.time.start, data.time.start, origin.time, train.length, nt, train.interval = 3600, pred.interval = 3600, interval = 3600) {
   cov.time.training.start <- gldr.time.start - as.numeric(difftime(data.time.start, origin.time, tz = "GMT", units = "secs")) 
   # converts gldr.time.start from being relative to origin.time to being relative to data.time.start
-  cov.time.training.end <- cov.time.training.start + (train.length - 1)*3600
-  cov.time.training <- seq(from = cov.time.training.start, to = cov.time.training.end, by = 3600)
-  cov.time.predicting.start <- cov.time.training.end + 3600
-  cov.time.predicting.end <- cov.time.predicting.start + (nt-1)*3600
-  cov.time.predicting <- seq(from = cov.time.predicting.start, to = cov.time.predicting.end, by = 3600)
+  cov.time.training.end <- cov.time.training.start + (train.length - 1)*train.interval
+  cov.time.training <- seq(from = cov.time.training.start, to = cov.time.training.end, by = train.interval)
+  cov.time.predicting.start <- cov.time.training.end + interval
+  cov.time.predicting.end <- cov.time.predicting.start + (nt-1)*pred.interval
+  cov.time.predicting <- seq(from = cov.time.predicting.start, to = cov.time.predicting.end, by = pred.interval)
   return(list(cov.time.training, cov.time.predicting))}

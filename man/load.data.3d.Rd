@@ -5,7 +5,7 @@
 \title{Load covariate data, including 3D, time and 1 variable
 Includes flags for variable and data source}
 \usage{
-load.data.3d(file, variable = "theta", source = "CMEMS")
+load.data.3d(file, variable = "thetao", source = "CMEMS")
 }
 \arguments{
 \item{file}{path to file}

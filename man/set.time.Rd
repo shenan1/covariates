@@ -4,7 +4,16 @@
 \alias{set.time}
 \title{Calculate training and predicting times}
 \usage{
-set.time(gldr.time.start, data.time.start, origin.time, train.length, nt)
+set.time(
+  gldr.time.start,
+  data.time.start,
+  origin.time,
+  train.length,
+  nt,
+  train.interval = 3600,
+  pred.interval = 3600,
+  interval = 3600
+)
 }
 \arguments{
 \item{data.time.start}{time CMEMS & ECMWF records begin}

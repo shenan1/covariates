@@ -6,7 +6,7 @@
 #' @param source MASS
 #' 
 #' @return Covariate data.
-load.data.3d <- function(file, variable = 'theta', source = 'CMEMS') {
+load.data.3d <- function(file, variable = 'thetao', source = 'CMEMS') {
   if (source == 'MASS') {
     lon.id <- 'longitudes'
     lat.id <- 'latitutdes'
