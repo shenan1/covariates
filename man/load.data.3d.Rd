@@ -3,7 +3,8 @@
 \name{load.data.3d}
 \alias{load.data.3d}
 \title{Load covariate data, including 3D, time and 1 variable
-Includes flags for variable and data source}
+Includes flags for variable and data source
+Also returns origin from which time is counted (excludes MASS data)}
 \usage{
 load.data.3d(file, variable = "thetao", source = "CMEMS")
 }
@@ -15,9 +16,10 @@ load.data.3d(file, variable = "thetao", source = "CMEMS")
 \item{source}{MASS}
 }
 \value{
-Covariate data.
+Covariate data and origin.
 }
 \description{
 Load covariate data, including 3D, time and 1 variable
 Includes flags for variable and data source
+Also returns origin from which time is counted (excludes MASS data)
 }

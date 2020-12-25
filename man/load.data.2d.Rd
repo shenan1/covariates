@@ -3,7 +3,8 @@
 \name{load.data.2d}
 \alias{load.data.2d}
 \title{Load covariate data, including 2D, time and 1 variable
-Includes flag for data source}
+Includes flag for data source
+Also returns origin from which time is counted}
 \usage{
 load.data.2d(file, source = "CMEMS")
 }
@@ -13,9 +14,10 @@ load.data.2d(file, source = "CMEMS")
 \item{source}{ECMWF}
 }
 \value{
-Covariate data.
+Covariate data and origin.
 }
 \description{
 Load covariate data, including 2D, time and 1 variable
 Includes flag for data source
+Also returns origin from which time is counted
 }
