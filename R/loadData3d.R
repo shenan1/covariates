@@ -15,6 +15,7 @@ load.data.3d <- function(file, variable = 'thetao', source = 'CMEMS') {
       lon.id <- 'lon'
       lat.id <- 'lat'
       depth.id <- 'depth'}
+  
   covariate <- nc_open(file)
   lon <- ncvar_get(covariate, varid = lon.id)
   lat <- ncvar_get(covariate, varid = lat.id)
@@ -42,15 +43,16 @@ load.data.3d <- function(file, variable = 'thetao', source = 'CMEMS') {
     time <- (1:length(var[1,1,1,]))*3600*24 - 1800*24
     origin <- NULL} else {
       time <- ncvar_get(covariate, varid = 'time')
-      text1 <- grep("since", as.character(covariate), value=TRUE)[1] # returns first line containing "since"
-      text2 <- sub(".*since ", "", text1) # returns everything after "since " in text1
-      origin <- str_sub(text2, 1, 10)} # returns characters 1-10 in text2
+      text1 <- grep("since", as.character(covariate), value=TRUE)[1]            # returns first line containing "since"
+      text2 <- sub(".*since ", "", text1)                                       # returns everything after "since " in text1
+      origin <- str_sub(text2, 1, 10)}                                          # returns characters 1-10 in text2
   
   nc_close(covariate)
   rm(covariate)
-  return(list(lon = lon, 
-              lat = lat, 
-              depth = depth, 
-              time = time, 
-              var = var, 
+  
+  return(list(lon    = lon, 
+              lat    = lat, 
+              depth  = depth, 
+              time   = time, 
+              var    = var, 
               origin = origin))}
