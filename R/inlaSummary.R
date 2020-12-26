@@ -1,5 +1,5 @@
-#' Extract fixed effects mean and sd
-#' Extract range 0.025 and stdev 0.975 quantiles
+#' Extract and save fixed effects mean and sd
+#' Extract and save range 0.025 and stdev 0.975 quantiles
 #' 
 #' @param mod.mode result of inla()
 #' @param n.fixed number of fixed effects

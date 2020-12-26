@@ -2,8 +2,8 @@
 % Please edit documentation in R/inlaSummary.R
 \name{inla.summary}
 \alias{inla.summary}
-\title{Extract fixed effects mean and sd
-Extract range 0.025 and stdev 0.975 quantiles}
+\title{Extract and save fixed effects mean and sd
+Extract and save range 0.025 and stdev 0.975 quantiles}
 \usage{
 inla.summary(mod.mode, n.fixed, l = 1, k, directory, write = FALSE)
 }
@@ -20,6 +20,6 @@ inla.summary(mod.mode, n.fixed, l = 1, k, directory, write = FALSE)
 Fixed effects mean and sd; range 0.025 and stdev 0.975 quantiles.
 }
 \description{
-Extract fixed effects mean and sd
-Extract range 0.025 and stdev 0.975 quantiles
+Extract and save fixed effects mean and sd
+Extract and save range 0.025 and stdev 0.975 quantiles
 }
