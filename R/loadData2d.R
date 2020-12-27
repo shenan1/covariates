@@ -1,6 +1,6 @@
-#' Load covariate data, including 2D, time and 1 variable
-#' Includes flag for data source
-#' Also returns origin from which time is counted
+#' Load covariate data, including 2D, time and 1 variable.
+#' Includes flag for data source.
+#' Also returns origin from which time is counted.
 #' 
 #' @param file path to file
 #' @param source ECMWF

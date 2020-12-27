@@ -1,6 +1,6 @@
-#' Load covariate data, including 3D, time and 1 variable
-#' Includes flags for variable and data source
-#' Also returns origin from which time is counted (excludes MASS data)
+#' Load covariate data, including 3D, time and 1 variable.
+#' Includes flags for variable and data source.
+#' Also returns origin from which time is counted (excludes MASS data).
 #' 
 #' @param file path to file
 #' @param variable uo, vo, chlf, chlr, oxyf, oxyr
