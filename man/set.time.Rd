@@ -12,13 +12,19 @@ set.time(
   nt,
   train.interval = 3600,
   pred.interval = 3600,
-  interval = 3600
+  flight.interval = 3600
 )
 }
 \arguments{
 \item{data.time.start}{time CMEMS & ECMWF records begin}
 
 \item{origin.time}{time glider records begin}
+
+\item{train.interval}{interval between training times}
+
+\item{pred.interval}{interval between prediction times}
+
+\item{flight.interval}{interval between training flight and prediction flight}
 }
 \value{
 Training and predicting times.

@@ -14,7 +14,7 @@ approx.grid(x, y, xout)
 \item{xout}{scalar to interpolate at}
 }
 \value{
-A grid of interpolated values (or NA values), with dimension matching that of y[\link{1}].
+A grid of interpolated values (or NA values), with dimension matching that of either grid in y.
 }
 \description{
 Linear interpolate between 2 parallel grids

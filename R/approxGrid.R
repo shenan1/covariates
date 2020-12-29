@@ -4,7 +4,7 @@
 #' @param y list of 2 grids (must be equi-spaced)
 #' @param xout scalar to interpolate at
 #'
-#' @return A grid of interpolated values (or NA values), with dimension matching that of y[[1]].
+#' @return A grid of interpolated values (or NA values), with dimension matching that of either grid in y.
 approx.grid <- function(x, y, xout) {
   covariate <- matrix(0, dim(y[[1]])[1], dim(y[[1]])[2])
   for (i in 1:dim(y[[1]])[1]){
