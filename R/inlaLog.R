@@ -23,12 +23,11 @@ inla.log <- function(mod.mode, l = 1, k, RData, directory, write = FALSE) {
     runtime[l, k] <- as.numeric(substr(grep("Total", log, value=TRUE), 27, 29))
     stupid[l, k] <- length(grep("stupid", log))
     save(runtime, file = paste(RData, 'runtime.RData', sep = ''))
-    save(stupid, file = paste(RData, 'stupid.RData', sep = ''))} else {
-      warnings[l, k] <- warnings[l, k] + 1
-      save(warnings, file = paste(RData, 'warnings.RData', sep = ''))}
-  
-  if (write == TRUE) {
-    log.txt <- paste(logs, 'log', l, '_k', k, '.txt', sep = '')
-    writeLines(log, log.txt)}
+    save(stupid, file = paste(RData, 'stupid.RData', sep = ''))
+    if (write == TRUE) {
+      log.txt <- paste(logs, 'log', l, '_k', k, '.txt', sep = '')
+      writeLines(log, log.txt)}} else {
+        warnings[l, k] <- warnings[l, k] + 1
+        save(warnings, file = paste(RData, 'warnings.RData', sep = ''))}
   
   return(warning)}
