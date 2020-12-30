@@ -1,6 +1,7 @@
 # https://hilaryparker.com/2014/04/29/writing-an-r-package-from-scratch/
 
 install.packages("devtools")
+install.packages("roxygen2")
 library("devtools")
 library("roxygen2")
 setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
