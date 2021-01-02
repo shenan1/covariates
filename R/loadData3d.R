@@ -45,7 +45,7 @@ load.data.3d <- function(file, variable = 'thetao', source = 'CMEMS') {
       time <- ncvar_get(covariate, varid = 'time')
       text1 <- grep("since", as.character(covariate), value=TRUE)[1]            # returns first line containing "since"
       text2 <- sub(".*since ", "", text1)                                       # returns everything after "since " in text1
-      origin <- str_sub(text2, 1, 10)}                                          # returns characters 1-10 in text2
+      origin <- substr(text2, 1, 10)}                                           # returns characters 1-10 in text2
   
   nc_close(covariate)
   rm(covariate)
