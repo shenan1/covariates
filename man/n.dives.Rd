@@ -9,7 +9,7 @@ n.dives(
   pilot.start = 7,
   pilot.end = 22,
   dives.flight = 3,
-  seconds.dive = 3832,
+  seconds.dive = 3600,
   comms = 20
 )
 }
