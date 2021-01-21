@@ -13,4 +13,4 @@ last.dive <- pilot.end*3600 - dives.flight*seconds.dive - comms*60
 first.dive <- (pilot.start + 24)*3600
 if (gldr.time.end.mod < last.dive){
   n.dives <- dives.flight} else {
-    n.dives <- ceiling((first.dive - gldr.time.end.mod)/seconds.dive)}}
+    n.dives <- ceiling((first.dive - (gldr.time.end.mod + comms*60))/seconds.dive)}}
