@@ -9,6 +9,7 @@ inla.error <- function(mod.mode, l = 1, k, RData) {
   
   if (class(mod.mode) != "inla") {
     errors[l, k] <- errors[l, k] + 1
-    save(errors, file = paste(RData, 'errors.RData', sep = ''))}
+    save(errors, file = paste(RData, 'errors.RData', sep = ''))} else {
+      errors[l, k] <- 0}
   
   return(errors[l, k])}
