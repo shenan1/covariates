@@ -6,7 +6,7 @@
 inla.error <- function(mod.mode, l = 1, k, RData) {
   
   load(paste(RData, 'errors.RData', sep = ''))
-  
+  print(class(mod.mode))
   if (class(mod.mode) != "inla") {
     errors[l, k] <- errors[l, k] + 1
     print(errors[l, k])
