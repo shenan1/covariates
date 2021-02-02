@@ -10,7 +10,7 @@ inla.error(mod.mode, l = 1, k, RData)
 \item{mod.mode}{result of inla}
 }
 \value{
-0 = no crash; 1 = crash.
+0 = no crash; !0 = crash.
 }
 \description{
 Identify whether inla crashed.
