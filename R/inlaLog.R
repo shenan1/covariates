@@ -1,11 +1,12 @@
-#' Extract and save run time, stupid searches and warnings from log.
-#' Returns number of warnings.
+#' Returns number of warnings from log.
+#' If no warnings, extracts and saves run time and number of stupid searches from log.
+#' If warning(s), prints "INLA warning(s); repeating calculation...".
 #' 
 #' @param mod.mode result of inla
 #' @param directory output directory
 #' @param write write the log file (TRUE or FALSE)
 #' 
-#' @return Fixed effects mean and sd; range 0.025 and stdev 0.975 quantiles.
+#' @return 0 = no warnings; !0 = warnings.
 inla.log <- function(mod.mode, l = 1, k, RData, directory, write = FALSE) {
   
   load(paste(RData, 'runtime.RData', sep = ''))
@@ -28,6 +29,7 @@ inla.log <- function(mod.mode, l = 1, k, RData, directory, write = FALSE) {
       log.txt <- paste(logs, 'log', l, '_k', k, '.txt', sep = '')
       writeLines(log, log.txt)}} else {
         warnings[l, k] <- warnings[l, k] + 1
+        print("INLA warning(s); repeating calculation...")
         save(warnings, file = paste(RData, 'warnings.RData', sep = ''))}
   
   return(warning)}

@@ -2,8 +2,9 @@
 % Please edit documentation in R/inlaLog.R
 \name{inla.log}
 \alias{inla.log}
-\title{Extract and save run time, stupid searches and warnings from log.
-Returns number of warnings.}
+\title{Returns number of warnings from log.
+If no warnings, extracts and saves run time and number of stupid searches from log.
+If warning(s), prints "INLA warning(s); repeating calculation...".}
 \usage{
 inla.log(mod.mode, l = 1, k, RData, directory, write = FALSE)
 }
@@ -15,9 +16,10 @@ inla.log(mod.mode, l = 1, k, RData, directory, write = FALSE)
 \item{write}{write the log file (TRUE or FALSE)}
 }
 \value{
-Fixed effects mean and sd; range 0.025 and stdev 0.975 quantiles.
+0 = no warnings; !0 = warnings.
 }
 \description{
-Extract and save run time, stupid searches and warnings from log.
-Returns number of warnings.
+Returns number of warnings from log.
+If no warnings, extracts and saves run time and number of stupid searches from log.
+If warning(s), prints "INLA warning(s); repeating calculation...".
 }
