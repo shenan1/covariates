@@ -7,7 +7,7 @@
 #' @param write write the log file (TRUE or FALSE)
 #' 
 #' @return 0 = no warnings; !0 = warnings.
-inla.log <- function(mod.mode, l = 1, k, RData, directory, write = FALSE) {
+inla.warning <- function(mod.mode, l = 1, k, RData, directory, write = FALSE) {
   
   load(paste(RData, 'runtime.RData', sep = ''))
   load(paste(RData, 'stupid.RData', sep = ''))
@@ -20,16 +20,16 @@ inla.log <- function(mod.mode, l = 1, k, RData, directory, write = FALSE) {
     if (as.numeric(log[grep("Eigenvalue", log) + j]) < 0) {
       warning <- warning + 1}}
   
-  if (warning == 0) {
-    runtime[l, k] <- as.numeric(substr(grep("Total", log, value=TRUE), 27, 29))
-    stupid[l, k] <- length(grep("stupid", log))
-    save(runtime, file = paste(RData, 'runtime.RData', sep = ''))
-    save(stupid, file = paste(RData, 'stupid.RData', sep = ''))
-    if (write == TRUE) {
-      log.txt <- paste(logs, 'log', l, '_k', k, '.txt', sep = '')
-      writeLines(log, log.txt)}} else {
-        warnings[l, k] <- warnings[l, k] + 1
-        print("INLA warning(s); repeating calculation...")
-        save(warnings, file = paste(RData, 'warnings.RData', sep = ''))}
+  if (warning != 0) {
+    warnings[l, k] <- warnings[l, k] + 1
+    print("INLA warning(s); repeating calculation...")
+    save(warnings, file = paste(RData, 'warnings.RData', sep = ''))} else {
+      runtime[l, k] <- as.numeric(substr(grep("Total", log, value=TRUE), 27, 29))
+      stupid[l, k] <- length(grep("stupid", log))
+      save(runtime, file = paste(RData, 'runtime.RData', sep = ''))
+      save(stupid, file = paste(RData, 'stupid.RData', sep = ''))
+      if (write == TRUE) {
+        log.txt <- paste(logs, 'log', l, '_k', k, '.txt', sep = '')
+        writeLines(log, log.txt)}}
   
   return(warning)}
