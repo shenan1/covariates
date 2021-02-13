@@ -6,7 +6,7 @@
 If no warnings, extracts and saves run time and number of stupid searches from log.
 If warning(s), prints "INLA warning(s); repeating calculation...".}
 \usage{
-inla.warning(mod.mode, l = 1, k, RData, directory, write = FALSE)
+inla.warning(mod.mode, n.fixed, l = 1, k, RData, directory, write = FALSE)
 }
 \arguments{
 \item{mod.mode}{result of inla}

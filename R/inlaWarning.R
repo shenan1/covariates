@@ -7,7 +7,7 @@
 #' @param write write the log file (TRUE or FALSE)
 #' 
 #' @return 0 = no warnings; !0 = warnings.
-inla.warning <- function(mod.mode, l = 1, k, RData, directory, write = FALSE) {
+inla.warning <- function(mod.mode, n.fixed, l = 1, k, RData, directory, write = FALSE) {
   
   load(paste(RData, 'runtime.RData', sep = ''))
   load(paste(RData, 'stupid.RData', sep = ''))
@@ -16,7 +16,7 @@ inla.warning <- function(mod.mode, l = 1, k, RData, directory, write = FALSE) {
   log <- mod.mode$logfile
   
   warning <- 0
-  for (j in 1:3) {                                                              # record negative eigenvalue (warning)
+  for (j in 1:n.fixed) {                                                              # record negative eigenvalue (warning)
     if (as.numeric(log[grep("Eigenvalue", log) + j]) < 0) {
       warning <- warning + 1}}
   
