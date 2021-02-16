@@ -29,7 +29,7 @@ inla.warning <- function(mod.mode, n.fixed, l = 1, k, RData, directory, write = 
       save(runtime, file = paste(RData, 'runtime.RData', sep = ''))
       save(stupid, file = paste(RData, 'stupid.RData', sep = ''))
       if (write == TRUE) {
-        log.txt <- paste(logs, 'log', l, '_k', k, '.txt', sep = '')
+        log.txt <- paste(directory, 'log', l, '_k', k, '.txt', sep = '')
         writeLines(log, log.txt)}}
   
   return(warning)}
