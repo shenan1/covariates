@@ -36,8 +36,10 @@ load.data.3d <- function(file, variable = 'thetao', source = 'CMEMS') {
         var <- ncvar_get(covariate, varid = 'ChlTot_fore')} else if (variable == 'chlr') {
           var <- ncvar_get(covariate, varid = 'ChlTot_rean')} else if (variable == 'oxyf') {
             var <- ncvar_get(covariate, varid = 'Ox_fore')} else if (variable == 'oxyr') {
-              var <- ncvar_get(covariate, varid = 'Oxy_rean')} else {
-                var <- ncvar_get(covariate)}
+              var <- ncvar_get(covariate, varid = 'Oxy_rean')} else if (variable == 'chl') {
+                var <- ncvar_get(covariate, varid = 'chl')} else if (variable == 'o2') {
+                  var <- ncvar_get(covariate, varid = 'o2')} else {
+                    var <- ncvar_get(covariate)}
   
   if (source == 'MASS') {
     time <- (1:length(var[1,1,1,]))*3600*24 - 1800*24
