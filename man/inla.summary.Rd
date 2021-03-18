@@ -3,7 +3,7 @@
 \name{inla.summary}
 \alias{inla.summary}
 \title{Extract and save fixed effects mean and sd.
-Extract and save practical range 0.025 and sd 0.975 quantiles.}
+Extract and save practical range and rho 0.025, and sd 0.975 quantiles.}
 \usage{
 inla.summary(
   mod.mode,
@@ -26,9 +26,9 @@ inla.summary(
 \item{write}{write the results (TRUE or FALSE)}
 }
 \value{
-Fixed effects mean and sd; range 0.025 and stdev 0.975 quantiles.
+Fixed effects mean and sd; range and rho 0.025, and stdev 0.975 quantiles.
 }
 \description{
 Extract and save fixed effects mean and sd.
-Extract and save practical range 0.025 and sd 0.975 quantiles.
+Extract and save practical range and rho 0.025, and sd 0.975 quantiles.
 }

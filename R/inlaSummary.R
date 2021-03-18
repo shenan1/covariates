@@ -1,12 +1,12 @@
 #' Extract and save fixed effects mean and sd.
-#' Extract and save practical range 0.025 and sd 0.975 quantiles.
+#' Extract and save practical range and rho 0.025, and sd 0.975 quantiles.
 #' 
 #' @param mod.mode result of inla()
 #' @param n.fixed number of fixed effects
 #' @param directory output directory
 #' @param write write the results (TRUE or FALSE)
 #' 
-#' @return Fixed effects mean and sd; range 0.025 and stdev 0.975 quantiles.
+#' @return Fixed effects mean and sd; range and rho 0.025, and stdev 0.975 quantiles.
 inla.summary <- function(mod.mode, n.fixed, n.hyper, l = 1, k, RData, directory, write = FALSE) {
   
   load(paste(RData, 'beta.mean.RData', sep = ''))
