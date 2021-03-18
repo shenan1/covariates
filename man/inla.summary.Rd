@@ -5,7 +5,16 @@
 \title{Extract and save fixed effects mean and sd.
 Extract and save practical range 0.025 and sd 0.975 quantiles.}
 \usage{
-inla.summary(mod.mode, n.fixed, l = 1, k, RData, directory, write = FALSE)
+inla.summary(
+  mod.mode,
+  n.fixed,
+  n.hyper,
+  l = 1,
+  k,
+  RData,
+  directory,
+  write = FALSE
+)
 }
 \arguments{
 \item{mod.mode}{result of inla()}
