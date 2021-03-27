@@ -7,7 +7,6 @@
 covariate.3d <- function(train.length, train.data, COV, train.times) {
   covariate <- integer(train.length)
   for (i in 1:train.length) {
-    print(i)
     if (sum(is.na(train.data[i,])) != 0) {
       covariate[i] <- NA} else if (train.data$depth[i] == 0) {
         covariate[i] <- NA} else {

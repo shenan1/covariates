@@ -102,5 +102,7 @@ covariate.4d <- function(train.length, train.data, COV, train.times) {
                 covariate[i] <- covariate1234} else {
                   covariate[i] <- approx(c(COV$time[time.nearby[1]], COV$time[time.nearby[2]]),
                                          c(covariate1234, covariate5678),
-                                         xout=train.times[i], method="linear", rule=1, ties=mean)$y}}}
+                                         xout=train.times[i], method="linear", rule=1, ties=mean)$y}
+          }
+    }
   return(covariate)}
