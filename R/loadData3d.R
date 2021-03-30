@@ -7,7 +7,7 @@
 #' @param source MASS
 #' 
 #' @return Covariate data and origin.
-load.data.3d <- function(file, variable, source = 'CMEMS') {
+load.data.3d <- function(file, variable = 'var', source = 'CMEMS') {
   if (source == 'MASS') {
     lon.id <- 'longitudes'
     lat.id <- 'latitutdes'
