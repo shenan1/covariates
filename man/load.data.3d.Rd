@@ -6,12 +6,12 @@
 Includes flags for variable and data source.
 Also returns origin from which time is counted (excludes MASS data).}
 \usage{
-load.data.3d(file, variable = "thetao", source = "CMEMS")
+load.data.3d(file, variable, source = "CMEMS")
 }
 \arguments{
 \item{file}{path to file}
 
-\item{variable}{uo, vo, chlf, chlr, oxyf, oxyr}
+\item{variable}{uo, vo, chlf, chlr, oxyf, oxyr, chl, o2, thetao}
 
 \item{source}{MASS}
 }

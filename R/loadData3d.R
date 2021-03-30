@@ -3,11 +3,11 @@
 #' Also returns origin from which time is counted (excludes MASS data).
 #' 
 #' @param file path to file
-#' @param variable uo, vo, chlf, chlr, oxyf, oxyr
+#' @param variable uo, vo, chlf, chlr, oxyf, oxyr, chl, o2, thetao
 #' @param source MASS
 #' 
 #' @return Covariate data and origin.
-load.data.3d <- function(file, variable = 'thetao', source = 'CMEMS') {
+load.data.3d <- function(file, variable, source = 'CMEMS') {
   if (source == 'MASS') {
     lon.id <- 'longitudes'
     lat.id <- 'latitutdes'
@@ -31,15 +31,26 @@ load.data.3d <- function(file, variable = 'thetao', source = 'CMEMS') {
   #   variable == 'thetao' ~ ncvar_get(covariate))
   
   if (variable == 'uo') {
-    var <- ncvar_get(covariate, varid = 'uo')} else if (variable == 'vo') {
-      var <- ncvar_get(covariate, varid = 'vo')} else if (variable == 'chlf') {
-        var <- ncvar_get(covariate, varid = 'ChlTot_fore')} else if (variable == 'chlr') {
-          var <- ncvar_get(covariate, varid = 'ChlTot_rean')} else if (variable == 'oxyf') {
-            var <- ncvar_get(covariate, varid = 'Ox_fore')} else if (variable == 'oxyr') {
-              var <- ncvar_get(covariate, varid = 'Oxy_rean')} else if (variable == 'chl') {
-                var <- ncvar_get(covariate, varid = 'chl')} else if (variable == 'o2') {
-                  var <- ncvar_get(covariate, varid = 'o2')} else {
-                    var <- ncvar_get(covariate)}
+    var <- ncvar_get(covariate, varid = 'uo')
+  } else if (variable == 'vo') {
+    var <- ncvar_get(covariate, varid = 'vo')
+  } else if (variable == 'chlf') {
+    var <- ncvar_get(covariate, varid = 'ChlTot_fore')
+  } else if (variable == 'chlr') {
+    var <- ncvar_get(covariate, varid = 'ChlTot_rean')
+  } else if (variable == 'oxyf') {
+    var <- ncvar_get(covariate, varid = 'Ox_fore')
+  } else if (variable == 'oxyr') {
+    var <- ncvar_get(covariate, varid = 'Oxy_rean')
+  } else if (variable == 'chl') {
+    var <- ncvar_get(covariate, varid = 'chl')
+  } else if (variable == 'o2') {
+    var <- ncvar_get(covariate, varid = 'o2')
+  } else if (variable == 'thetao') {
+    var <- ncvar_get(covariate, varid = 'thetao')
+  } else {
+    var <- ncvar_get(covariate)
+  }
   
   if (source == 'MASS') {
     time <- (1:length(var[1,1,1,]))*3600*24 - 1800*24
