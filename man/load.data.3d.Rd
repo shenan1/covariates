@@ -6,7 +6,7 @@
 Includes flags for variable and data source.
 Also returns origin from which time is counted (excludes MASS data).}
 \usage{
-load.data.3d(file, variable, source = "CMEMS")
+load.data.3d(file, variable = "var", source = "CMEMS")
 }
 \arguments{
 \item{file}{path to file}

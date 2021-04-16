@@ -3,15 +3,17 @@
 #' Also returns origin from which time is counted.
 #' 
 #' @param file path to file
-#' @param source ECMWF
+#' @param source ECMWF, NEODAAS
 #' 
 #' @return Covariate data and origin.
 load.data.2d <- function(file, source = 'CMEMS') {
-  if (source == 'ECMWF') {
-    lon.id <- 'longitude'
-    lat.id <- 'latitude'} else {
-      lon.id <- 'lon'
-      lat.id <- 'lat'}
+  if (source == 'CMEMS') {
+    lon.id <- 'lon'
+    lat.id <- 'lat'
+    } else {
+      lon.id <- 'longitude'
+      lat.id <- 'latitude'
+    }
   
   covariate <- nc_open(file)
   lon <- ncvar_get(covariate, varid = lon.id)

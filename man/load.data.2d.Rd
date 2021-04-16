@@ -11,7 +11,7 @@ load.data.2d(file, source = "CMEMS")
 \arguments{
 \item{file}{path to file}
 
-\item{source}{ECMWF}
+\item{source}{ECMWF, NEODAAS}
 }
 \value{
 Covariate data and origin.
