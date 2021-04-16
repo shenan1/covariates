@@ -30,10 +30,14 @@ load.data.2d <- function(file, source = 'CMEMS') {
   
   if (source == 'ECMWF') {
     lat <- rev(lat)
-    time <- time*3600}
+    time <- time*3600
+    }
   
   return(list(lon    = lon, 
               lat    = lat, 
               time   = time, 
               var    = var, 
-              origin = origin))}
+              origin = origin
+              )
+         )
+  }
