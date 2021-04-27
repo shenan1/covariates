@@ -5,7 +5,7 @@
 #' 
 #' @return Nearest and neighbour indices.
 find.index <- function(arbitrary.value, standard.values) {
-  index.nearest <- which.min(abs(arbitrary.value - standard.values))
+  index.nearest <- which.min(abs(c(arbitrary.value) - standard.values))
   if (arbitrary.value < standard.values[index.nearest]){
     index.neighbour <- index.nearest - 1} 
   else {
