@@ -14,7 +14,7 @@ covariate.4d.grid <- function(pred.grid, pred.depth, COV, pred.time) {
     for (j in 1:length(pred.grid$y)) {
       pred.data$lon <- pred.grid$x[i]
       pred.data$lat <- pred.grid$y[j]
-      covariate[i, j] <- covariate.4d(1, pred.data, CHL, pred.time)
+      covariate[i, j] <- covariate.4d(1, pred.data, COV, pred.time)
     }}
   return(covariate)
   }
