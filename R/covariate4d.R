@@ -9,7 +9,7 @@ covariate.4d <- function(train.length, train.data, COV, train.times) {
   covariate <- integer(train.length)
   for (i in 1:train.length) {
     if (sum(is.na(train.data[i,])) != 0) {
-      covariate[i] <- NA} else if (train.data$depth[i] == 0) {
+      covariate[i] <- NA} else if (train.data$depth[i] <= 0) {
         covariate[i] <- NA} else {
           lon.nearby <- covariates:::find.index(train.data$lon[i], COV$lon)
           lat.nearby <- covariates:::find.index(train.data$lat[i], COV$lat)
