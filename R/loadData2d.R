@@ -19,7 +19,12 @@ load.data.2d <- function(file, source = 'CMEMS') {
   lon <- ncvar_get(covariate, varid = lon.id)
   lat <- ncvar_get(covariate, varid = lat.id)
   time <- ncvar_get(covariate, varid = 'time')
-  var <- ncvar_get(covariate)
+  
+  if (source == 'NEODAAS') {
+    var <- ncvar_get(covariate, varid = 'chl')
+  } else {
+    var <- ncvar_get(covariate)
+  }
   
   text1 <- grep("since", as.character(covariate), value=TRUE)[1]                # returns first line containing "since"
   text2 <- sub(".*since ", "", text1)                                           # returns everything after "since " in text1
